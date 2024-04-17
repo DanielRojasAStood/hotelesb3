@@ -19,7 +19,7 @@ $heading_level_h3  = 'h3';
 
 <main>
     <!-- Title Banner -->
-        <?php get_template_part('template-parts/sections/section', 'title-banner', array('title' => $title, 'banner' => $banner )) ?>
+        <?php get_template_part('template-parts/sections/section', 'title-banner', array('title' => $title, 'banner' => $banner, 'class' => '' )) ?>
     <!-- End Title Banner -->
 
     <section>
