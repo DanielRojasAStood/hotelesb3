@@ -22,7 +22,7 @@ $heading_level_h3  = 'h3';
         <?php get_template_part('template-parts/sections/section', 'title-banner', array('title' => $title, 'banner' => $banner )) ?>
     <!-- End Title Banner -->
 
-    <section class="">
+    <section>
         <div class="container--medium">
             <?php get_template_part('template-parts/content', 'title', array('title' => $title_events, 'class' => 'h2 text-center', 'heading_level' => $heading_level_h2));?>
         </div>
