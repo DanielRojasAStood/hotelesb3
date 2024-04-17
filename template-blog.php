@@ -19,18 +19,22 @@ $title_category = isset($group_category['title']) ? esc_html($group_category['ti
     <?php get_template_part('template-parts/sections/section', 'title-banner', array('title' => $title, 'banner' => $banner, 'class' => 'text-center' )); ?>
     <!-- Título de la categoría -->
 
+    <!-- Title -->
+    <section>
+        <div class="container--medium">
+            <?php get_template_part('template-parts/content', 'title', array('title' => $title_category, 'class' => 'h2 text-center', 'heading_level' => 'h2'));?>
+        </div>
+    </section>
+    <!-- End Title -->
+
+    <!-- Category -->
+        <?php get_template_part('template-parts/sections/section', 'category')?>
+    <!-- End Category -->
+    
     <div class="customBlog">
         <div class="container--large">
             <div class="customBlog__grid">
                 <div>
-                    <!-- Title -->
-                    <section>
-                        <div class="container--medium">
-                            <?php get_template_part('template-parts/content', 'title', array('title' => $title_category, 'class' => 'h2 text-center', 'heading_level' => 'h2'));?>
-                        </div>
-                    </section>
-                    <!-- End Title -->
-                
                     <!-- Posts -->
                     <?php get_template_part('template-parts/sections/section', 'posts-cards'); ?>
                     <!-- End Posts -->
