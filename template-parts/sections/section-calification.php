@@ -4,6 +4,7 @@ $title    = get_field('title_calification');
 $items    = get_field('group_calification');
 
 $title = isset($title) ? esc_html($title) : '';
+$heading_level  = 'h2';
 
 $image_1 = isset($items['image_1']) ? esc_url($items['image_1']) : '';
 $image_2 = isset($items['image_2']) ? esc_url($items['image_2']) : '';
@@ -38,13 +39,13 @@ $alt_4       = isset($items['link_4']['title']) ? esc_attr($items['link_4']['tit
 
 <section class="customCalification">
     <div class="container--medium">
-        <?php get_template_part('template-parts/content', 'title', array('title' => $title, 'class' => 'h2 fw-bold text-center')) ?>
+        <?php get_template_part('template-parts/content', 'title', array('title' => $title, 'class' => 'h2 text-center', 'heading_level' => $heading_level));?>
         <div class="customCalification__grid">
             <a href="<?php echo $link_1; ?>" target="<?php echo $target_1; ?>" title="<?php echo $alt_1; ?>">
                 <figure class="customCalification__img">
                     <img src="<?php echo $image_1; ?>" alt="Imagen 1 - <?php echo $sitename; ?>" title="Imagen 1" width="140" height="100">
                 </figure>
-                <p class="copy"><?php echo $numer_1; ?></p>
+                <h3 class="h3"><?php echo $numer_1; ?></h3>
                 <p class="copy"><?php echo $title_1; ?></p>
             </a>
 
@@ -52,7 +53,7 @@ $alt_4       = isset($items['link_4']['title']) ? esc_attr($items['link_4']['tit
                 <figure class="customCalification__img">
                     <img src="<?php echo $image_2; ?>" alt="Imagen 1 - <?php echo $sitename; ?>" title="Imagen 1" width="60" height="61">
                 </figure>
-                <p class="copy"><?php echo $numer_2; ?></p>
+                <h3 class="h3"><?php echo $numer_2; ?></h3>
                 <p class="copy"><?php echo $title_2; ?></p>
             </a>
 
@@ -60,7 +61,7 @@ $alt_4       = isset($items['link_4']['title']) ? esc_attr($items['link_4']['tit
                 <figure class="customCalification__img">
                     <img src="<?php echo $image_3; ?>" alt="Imagen 1 - <?php echo $sitename; ?>" title="Imagen 1" width="225" height="41">
                 </figure>
-                <p class="copy"><?php echo $numer_3; ?></p>
+                <h3 class="h3"><?php echo $numer_3; ?></h3>
                 <p class="copy"><?php echo $title_3; ?></p>
             </a>
 
@@ -68,7 +69,7 @@ $alt_4       = isset($items['link_4']['title']) ? esc_attr($items['link_4']['tit
                 <figure class="customCalification__img">
                     <img src="<?php echo $image_4; ?>" alt="Imagen 1 - <?php echo $sitename; ?>" title="Imagen 1" width="178" height="50">
                 </figure>
-                <p class="copy"><?php echo $numer_4; ?></p>
+                <h3 class="h3"><?php echo $numer_4; ?></h3>
                 <p class="copy"><?php echo $title_4; ?></p>
             </a>
         </div>

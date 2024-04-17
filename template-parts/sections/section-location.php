@@ -1,6 +1,7 @@
 <?php 
 $sitename       = get_bloginfo('name');
 $title          = get_field('title_location');
+$heading_level  = 'h2';
 $group_location = get_field('group_location');
 
 $title     = isset($title) ? esc_html($title) : '';
@@ -17,7 +18,7 @@ $target_2  = isset($group_location['cta_2']['target']) ? esc_attr($group_locatio
 $copy_2    = isset($group_location['copy_2']) ? $group_location['copy_2'] : '';
 ?>
 <section class="customLocation">
-    <?php get_template_part('template-parts/content', 'title', array('title' => $title, 'class' => 'text-center')) ?>
+    <?php get_template_part('template-parts/content', 'title', array('title' => $title, 'class' => 'h2 text-center', 'heading_level' => $heading_level));?>
     <div class="container--medium">
         <div class="customLocation__grid">
             <div class="customLocation__col">

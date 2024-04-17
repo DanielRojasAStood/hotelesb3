@@ -39,4 +39,16 @@ export function initSlickCarousels() {
     centerMode: true,
     arrows: false,
   });
+
+  $(".slickGallery").each(function () {
+    $(this).slick({
+      dots: true,
+      infinite: true,
+      speed: 700,
+      slidesToShow: 1,
+      autoplay: true,
+      autoplaySpeed: 3000000,
+      arrows: false,
+    });
+  });
 }

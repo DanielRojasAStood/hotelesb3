@@ -1,7 +1,8 @@
 <?php 
-$sitename = get_bloginfo('name');
-$title    = get_field('title_testimonials');
-$items    = get_field('group_testimonials');
+$sitename       = get_bloginfo('name');
+$title          = get_field('title_testimonials');
+$heading_level  = 'h2';
+$items          = get_field('group_testimonials');
 
 $title = isset($title) ? esc_html($title) : '';
 
@@ -25,7 +26,7 @@ $image_5 = isset($items['image_5']) && esc_url($items['image_5']) ? esc_url($ite
 ?>
 
 <section class="slick-testimonials">
-    <?php get_template_part('template-parts/content', 'title', array('title' => $title, 'class' => 'text-center')) ?>
+    <?php get_template_part('template-parts/content', 'title', array('title' => $title, 'class' => 'h2 text-center', 'heading_level' => $heading_level));?>
     <div class="slickTestimonials">
         <div class="slick-testimonials__item">
             <p class="copy"><?php echo $detail_1; ?></p>

@@ -5,7 +5,6 @@ Template Name: Plantilla Inicio
 get_header('new');?>
 
 <main>
-    <h1>Home..</h1>
     <!-- Slider -->
         <?php get_template_part('template-parts/sections/section', 'slider') ?>
     <!-- End Slider -->

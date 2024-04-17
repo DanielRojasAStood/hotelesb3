@@ -21,7 +21,7 @@ define('IMG_BASE', URL_BASE . 'img/');
 
 // Correcting the path to include files from the child theme directory
 $incPath = get_stylesheet_directory() . '/inc/';
-$requiredFiles = ['theme-setup.php', 'styles-scripts.php'];
+$requiredFiles = ['theme-setup.php', 'styles-scripts.php', 'custom-postype.php'];
 
 foreach ($requiredFiles as $file) {
     $filePath = $incPath . $file;

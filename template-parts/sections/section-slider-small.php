@@ -1,7 +1,8 @@
 <?php 
-$sitename = get_bloginfo('name');
-$title    = get_field('title_slider_text');
-$items    = get_field('group_slider_text');
+$sitename       = get_bloginfo('name');
+$title          = get_field('title_slider_text');
+$heading_level  = 'h2';
+$items          = get_field('group_slider_text');
 
 $title = isset($title) ? esc_html($title) : '';
 
@@ -12,7 +13,7 @@ $copy     = isset($items['copy']) ? $items['copy'] : '';
 ?>
 
 <section class="slick-small">
-    <?php get_template_part('template-parts/content', 'title', array('title' => $title, 'class' => 'text-center')) ?>
+    <?php get_template_part('template-parts/content', 'title', array('title' => $title, 'class' => 'h2 text-center', 'heading_level' => $heading_level));?>
     <div class="container--medium">
         <div class="slick-small__grid">
             <div class="slick-small__col">

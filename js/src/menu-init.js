@@ -13,6 +13,15 @@ $(document).ready(function () {
   $botonToggleMenu.click(function (event) {
     event.preventDefault();
   });
+
+  $('.menu-menu-espanol-container .menu-item-has-children a').click(function(e) {
+    e.preventDefault();
+    $(this).next('.sub-menu').slideToggle();
+    $(this).parent().siblings().find('.sub-menu').slideUp();
+    $(this).parent().siblings().find('.menu-link').removeClass('active');
+    $(this).toggleClass('active');
+    e.stopPropagation();
+  });
 });
 
 export function openMenu() {
@@ -44,4 +53,9 @@ $(window).scroll(function () {
   //   var middleThreshold = $(window).height() / 2;
   //   return ((elemTop + threshold <= docViewBottom) && (elemBottom >= docViewTop + middleThreshold));
   // }
+  
+
+  
+
+
 });
