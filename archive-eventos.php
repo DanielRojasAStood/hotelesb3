@@ -1,18 +1,20 @@
 <?php
 /* 
-Template Name: Plantilla Eventos
+Template Name: Plantilla Evento
 */
 get_header('new');
 
+$pageID       = get_page_by_path('eventos')->ID;
+
 $sitename       = get_bloginfo('name');
-$group_title    = get_field('group_title');
+$group_title    = get_field('group_title', $pageID);
 $title          = isset($group_title['title']) ? esc_html($group_title['title']) : '';
 $banner         = isset($group_title['banner']) ? esc_url($group_title['banner']) : '';
 
-$group_events    = get_field('group_events');
-$title_events    = $group_events['title'];
+$group_events    = get_field('group_events', $pageID);
+$title_event    = !empty($group_events['heading']) ? esc_html($group_events['heading'] ) : '';
 
-$group_gallery  = get_field('group_gallery');
+$group_gallery  = get_field('group_gallery', $pageID);
 $heading_level_h2  = 'h2';
 $heading_level_h3  = 'h3';
 ?>
@@ -24,7 +26,7 @@ $heading_level_h3  = 'h3';
 
     <section>
         <div class="container--medium">
-            <?php get_template_part('template-parts/content', 'title', array('title' => $title_events, 'class' => 'h2 text-center', 'heading_level' => $heading_level_h2));?>
+            <?php get_template_part('template-parts/content', 'title', array('title' => $title_event, 'class' => 'h2 text-center', 'heading_level' => $heading_level_h2));?>
         </div>
     </section>
 

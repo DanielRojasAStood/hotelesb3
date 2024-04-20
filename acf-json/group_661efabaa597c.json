@@ -118,7 +118,7 @@
                 {
                     "key": "field_661f2c3578871",
                     "label": "Titulo",
-                    "name": "title",
+                    "name": "heading",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -143,7 +143,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "template-events.php"
+                "value": "archive-eventos.php"
             }
         ]
     ],
@@ -156,5 +156,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1713324450
+    "modified": 1713586213
 }
