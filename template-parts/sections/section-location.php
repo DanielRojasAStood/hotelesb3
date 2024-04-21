@@ -29,15 +29,22 @@ $copy_2    = isset($group_location['copy_2']) ? $group_location['copy_2'] : '';
                     <div class="copy text-center">
                         <?php echo $copy_1 ; ?>
                     </div>
-                    <a href="<?php echo $cta_1 ; ?>" class="button button--red" title="<?php echo $title_1 ; ?>" target="<?php echo $target_1 ; ?>">
-                        <?php echo $title_1 ; ?>
-                    </a>
+                    <?php if($title_1) { ?>
+                        <a href="<?php echo $cta_1 ; ?>" class="button button--red" title="<?php echo $title_1 ; ?>" target="<?php echo $target_1 ; ?>">
+                            <?php echo $title_1 ; ?>
+                        </a>
+                    <?php } ?>
                     <div class="copy text-center">
                         <?php echo $copy_2 ; ?>
                     </div>
-                    <a href="<?php echo $cta_2 ; ?>" class="button button--red" title="<?php echo $title_2 ; ?>" target="<?php echo $target_2 ; ?>">
-                        <?php echo $title_2 ; ?>
-                    </a>
+                    <?php if($title_2) { ?>
+                        <a href="<?php echo $cta_2 ; ?>" class="button button--red" title="<?php echo $title_2 ; ?>" target="<?php echo $target_2 ; ?>">
+                            <?php echo $title_2 ; ?>
+                        </a>
+                    <?php } ?>
+                    <div class="customLocation__social">
+                        <?php get_template_part('template-parts/content', 'social-media-widget') ?>
+                    </div>
                 </div>
             </div>
         </div>

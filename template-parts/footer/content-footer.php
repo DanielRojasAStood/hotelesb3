@@ -16,12 +16,14 @@
             <div class="customFooter__col">
                 <div>
                     <a href="/" title="Logo Footer">
-                        <img src="<?php echo $logo; ?>" alt="Logo Footer - <?php $sitename; ?>" width="60" height="30" title="Logo Footer">
+                        <img src="<?php echo $logo; ?>" alt="Logo Footer - <?php $sitename; ?>" width="100" height="100" title="Logo Footer">
                     </a>
                 </div>
-                <!-- Social Media -->
-                    <?php get_template_part('template-parts/content', 'social-media-widget') ?>
-                <!-- End Social Media -->
+                <div class="customFooter__social">
+                    <!-- Social Media -->
+                        <?php get_template_part('template-parts/content', 'social-media-widget') ?>
+                    <!-- End Social Media -->
+                </div>
             </div>
             <div class="customFooter__col">
                 <h3 class="h3"><?php echo $title_contact ?></h3>
