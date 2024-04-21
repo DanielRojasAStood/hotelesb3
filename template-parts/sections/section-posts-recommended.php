@@ -3,12 +3,16 @@ $sitename       = get_bloginfo('name');
 // Obtener todos los posts
 $args = array(
     'post_type' => 'post',
-    'posts_per_page' => -1, // Obtener todos los posts
+    'posts_per_page' => -1,
+    'orderby' => 'date',
+    'order' => 'DESC'
 );
 
 $argsBottom = array(
     'post_type' => 'post',
-    'posts_per_page' => -1, // Obtener todos los posts
+    'posts_per_page' => -1,
+    'orderby' => 'date',
+    'order' => 'ASC'
 );
 
 $all_posts = get_posts($args);

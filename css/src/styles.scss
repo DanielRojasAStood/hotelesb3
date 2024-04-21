@@ -924,9 +924,21 @@ p {
 
   &__content {
     padding-bottom: 50px;
+
     figure {
       display: flex;
+      flex-direction: column;
       margin-bottom: 40px;
+
+      img {
+        width: 100%;
+        aspect-ratio: 2 / 1;
+        object-fit: cover;
+      }
+    }
+
+    figcaption {
+      margin-bottom: 0;
     }
 
     p,
