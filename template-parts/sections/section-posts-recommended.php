@@ -58,7 +58,7 @@ $random_posts_bottom = array_rand($all_posts_bottom, 3);
     </section>
 
     <section class="customCardRecommended__bottom">
-        <?php get_template_part('template-parts/content', 'title', array('title' => 'Artículos de Interés para Ti', 'class' => 'h4', 'heading_level' => 'h3'));?>
+        <?php get_template_part('template-parts/content', 'title', array('title' => 'Artículos más buscados', 'class' => 'h4', 'heading_level' => 'h3'));?>
         <?php 
         foreach ($random_posts_bottom as $post_index) :
             $post = $all_posts_bottom[$post_index];

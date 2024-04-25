@@ -28,4 +28,11 @@ function my_acf_json_save_point( $path ) {
 }
 add_filter( 'acf/settings/save_json', 'my_acf_json_save_point' );
 
+// custom size
+function img_setup_theme() {
+    add_image_size('custom-size', 423, 519, true); // Normal resolution
+    add_image_size('custom-size-2x', 846, 1038, true); // High resolution
+}
+add_action('after_img_setup_theme', 'setup_theme');
+
 

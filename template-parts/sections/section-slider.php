@@ -1,9 +1,33 @@
 <?php 
 $sitename = get_bloginfo('name');
 $items    = get_field('group_slider');
-$slider_1 = isset($items['slider_1']) ? esc_url($items['slider_1']) : '';
-$slider_2 = isset($items['slider_2']) ? esc_url($items['slider_2']) : '';
-$slider_3 = isset($items['slider_3']) ? esc_url($items['slider_3']) : '';
+
+$image_1_id      = !empty($items["slider_1"]['ID']) ? $items["slider_1"]['ID'] : '';
+$image_1_src     = wp_get_attachment_image_url($image_1_id, 'custom-size-2x');
+$image_1_srcset  = wp_get_attachment_image_srcset($image_1_id, 'custom-size-2x');
+$image_1_info    = wp_get_attachment_image_src($image_1_id, 'full');
+$image_1_width   = ($image_1_info) ? $image_1_info[1] : '';
+$image_1_height  = ($image_1_info) ? $image_1_info[2] : '';
+$image_1_alt     = ($image_1_id) ? get_post_meta($image_1_id, '_wp_attachment_image_alt', true) : ''; 
+$image_1_title   = ($image_1_id) ? get_the_title($image_1_id) : '';
+
+$image_2_id      = !empty($items["slider_2"]['ID']) ? $items["slider_2"]['ID'] : '';
+$image_2_src     = wp_get_attachment_image_url($image_2_id, 'custom-size-2x');
+$image_2_srcset  = wp_get_attachment_image_srcset($image_2_id, 'custom-size-2x');
+$image_2_info    = wp_get_attachment_image_src($image_2_id, 'full');
+$image_2_width   = ($image_2_info) ? $image_2_info[1] : '';
+$image_2_height  = ($image_2_info) ? $image_2_info[2] : '';
+$image_2_alt     = ($image_2_id) ? get_post_meta($image_2_id, '_wp_attachment_image_alt', true) : ''; 
+$image_2_title   = ($image_2_id) ? get_the_title($image_2_id) : '';
+
+$image_3_id      = !empty($items["slider_3"]['ID']) ? $items["slider_3"]['ID'] : '';
+$image_3_src     = wp_get_attachment_image_url($image_3_id, 'custom-size-2x');
+$image_3_srcset  = wp_get_attachment_image_srcset($image_3_id, 'custom-size-2x');
+$image_3_info    = wp_get_attachment_image_src($image_3_id, 'full');
+$image_3_width   = ($image_3_info) ? $image_3_info[1] : '';
+$image_3_height  = ($image_3_info) ? $image_3_info[2] : '';
+$image_3_alt     = ($image_3_id) ? get_post_meta($image_3_id, '_wp_attachment_image_alt', true) : ''; 
+$image_3_title   = ($image_3_id) ? get_the_title($image_3_id) : '';
 
 $title_1  = isset($items['link_1']['title']) ? esc_attr($items['link_1']['title']) : '';
 $link_1   = isset($items['link_1']['url']) ? esc_url($items['link_1']['url']) : '';
@@ -37,15 +61,15 @@ $target_5 = isset($items['link_5']['target']) ? esc_attr($items['link_5']['targe
     </div>
     <div class="slickBanner">
         <figure class="slick-banner__img">
-            <img src="<?php echo $slider_1; ?>" alt="slider 1 - <?php echo $sitename; ?>" title="slider 1" width="1600" height="1068">
+            <img width="<?php echo $image_1_width ?>" height="<?php echo $image_1_height ?>" src="<?php echo $image_1_src ?>" data-src="<?php echo $image_1_src ?>" srcset="<?php echo $image_1_srcset ?>" data-srcset="<?php echo $image_1_srcset ?>" alt="<?php echo $image_1_alt . ' - ' . $sitename; ?> " title="<?php echo $image_1_title ?>">
         </figure>
 
         <figure class="slick-banner__img">
-            <img src="<?php echo $slider_2; ?>" alt="slider 2 - <?php echo $sitename; ?>" title="slider 2" width="1600" height="1068">
+            <img width="<?php echo $image_2_width ?>" height="<?php echo $image_2_height ?>" src="<?php echo $image_2_src ?>" data-src="<?php echo $image_2_src ?>" srcset="<?php echo $image_2_srcset ?>" data-srcset="<?php echo $image_2_srcset ?>" alt="<?php echo $image_2_alt . ' - ' . $sitename; ?> " title="<?php echo $image_2_title ?>">
         </figure>
 
         <figure class="slick-banner__img">
-            <img src="<?php echo $slider_3; ?>" alt="slider 3 - <?php echo $sitename; ?>" title="slider 3" width="1600" height="1068">
+            <img width="<?php echo $image_3_width ?>" height="<?php echo $image_3_height ?>" src="<?php echo $image_3_src ?>" data-src="<?php echo $image_3_src ?>" srcset="<?php echo $image_3_srcset ?>" data-srcset="<?php echo $image_3_srcset ?>" alt="<?php echo $image_3_alt . ' - ' . $sitename; ?> " title="<?php echo $image_3_title ?>">
         </figure>
     </div>
 </section>
