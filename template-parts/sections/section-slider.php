@@ -60,16 +60,13 @@ $target_5 = isset($items['link_5']['target']) ? esc_attr($items['link_5']['targe
         <?php if($title_5) { ?><a href="<?php echo $link_5; ?>" target="<?php echo $target_5; ?>" title="<?php echo $title_5; ?>"><?php echo $title_5; ?></a><?php }?>
     </div>
     <div class="slickBanner">
-        <figure class="slick-banner__img">
-            <img width="<?php echo $image_1_width ?>" height="<?php echo $image_1_height ?>" src="<?php echo $image_1_src ?>" data-src="<?php echo $image_1_src ?>" srcset="<?php echo $image_1_srcset ?>" data-srcset="<?php echo $image_1_srcset ?>" alt="<?php echo $image_1_alt . ' - ' . $sitename; ?> " title="<?php echo $image_1_title ?>">
+        <figure class="slick-banner__img" role="img" style="background-image: url(<?php echo $image_1_src ?>)" data-bg="<?php echo $image_1_src ?>">
         </figure>
 
-        <figure class="slick-banner__img">
-            <img width="<?php echo $image_2_width ?>" height="<?php echo $image_2_height ?>" src="<?php echo $image_2_src ?>" data-src="<?php echo $image_2_src ?>" srcset="<?php echo $image_2_srcset ?>" data-srcset="<?php echo $image_2_srcset ?>" alt="<?php echo $image_2_alt . ' - ' . $sitename; ?> " title="<?php echo $image_2_title ?>">
+        <figure class="slick-banner__img" role="img" style="background-image: url(<?php echo $image_2_src ?>)" data-bg="<?php echo $image_2_src ?>">
         </figure>
 
-        <figure class="slick-banner__img">
-            <img width="<?php echo $image_3_width ?>" height="<?php echo $image_3_height ?>" src="<?php echo $image_3_src ?>" data-src="<?php echo $image_3_src ?>" srcset="<?php echo $image_3_srcset ?>" data-srcset="<?php echo $image_3_srcset ?>" alt="<?php echo $image_3_alt . ' - ' . $sitename; ?> " title="<?php echo $image_3_title ?>">
+        <figure class="slick-banner__img" role="img" style="background-image: url(<?php echo $image_3_src ?>)" data-bg="<?php echo $image_3_src ?>">
         </figure>
     </div>
 </section>

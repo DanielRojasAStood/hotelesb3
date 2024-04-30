@@ -230,7 +230,6 @@ p {
       font-weight: bold;
       border-bottom: 0 !important;
 
-
       &:hover {
         color: var(--fff);
       }
@@ -363,7 +362,11 @@ p {
     }
   }
   &__img {
+    height: 500px;
     margin: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     img {
       width: 100%;
@@ -1071,4 +1074,3 @@ p {
     }
   }
 }
-
