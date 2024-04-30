@@ -638,7 +638,7 @@
                     "label": "Mapa",
                     "name": "map",
                     "aria-label": "",
-                    "type": "wysiwyg",
+                    "type": "image",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -647,11 +647,32 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "full",
-                    "media_upload": 1,
-                    "delay": 0
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium"
+                },
+                {
+                    "key": "field_662ecde966c79",
+                    "label": "Link mapa",
+                    "name": "link_mapa",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
                 },
                 {
                     "key": "field_661cafbfeb574",
@@ -794,7 +815,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "url",
+                    "return_format": "array",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -819,7 +840,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "url",
+                    "return_format": "array",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -844,7 +865,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "url",
+                    "return_format": "array",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -1583,5 +1604,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1714049289
+    "modified": 1714344251
 }

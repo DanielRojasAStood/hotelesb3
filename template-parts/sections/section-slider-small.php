@@ -6,9 +6,33 @@ $items          = get_field('group_slider_text');
 
 $title = isset($title) ? esc_html($title) : '';
 
-$slider_1 = isset($items['slider_1']) ? esc_url($items['slider_1']) : '';
-$slider_2 = isset($items['slider_2']) ? esc_url($items['slider_2']) : '';
-$slider_3 = isset($items['slider_3']) ? esc_url($items['slider_3']) : '';
+$slider_1_image_id      = !empty($items["slider_1"]['ID']) ? $items["slider_1"]['ID'] : '';
+$slider_1_image_src     = wp_get_attachment_image_url($slider_1_image_id, 'custom-size');
+$slider_1_image_srcset  = wp_get_attachment_image_srcset($slider_1_image_id, 'custom-size');
+$slider_1_image_info    = wp_get_attachment_image_src($slider_1_image_id, 'full');
+$slider_1_image_width   = ($slider_1_image_info) ? $slider_1_image_info[1] : '';
+$slider_1_image_height  = ($slider_1_image_info) ? $slider_1_image_info[2] : '';
+$slider_1_image_alt     = ($slider_1_image_id) ? get_post_meta($slider_1_image_id, '_wp_attachment_image_alt', true) : ''; 
+$slider_1_image_title   = ($slider_1_image_id) ? get_the_title($slider_1_image_id) : '';
+
+$slider_2_image_id      = !empty($items["slider_1"]['ID']) ? $items["slider_1"]['ID'] : '';
+$slider_2_image_src     = wp_get_attachment_image_url($slider_2_image_id, 'custom-size');
+$slider_2_image_srcset  = wp_get_attachment_image_srcset($slider_2_image_id, 'custom-size');
+$slider_2_image_info    = wp_get_attachment_image_src($slider_2_image_id, 'full');
+$slider_2_image_width   = ($slider_2_image_info) ? $slider_2_image_info[1] : '';
+$slider_2_image_height  = ($slider_2_image_info) ? $slider_2_image_info[2] : '';
+$slider_2_image_alt     = ($slider_2_image_id) ? get_post_meta($slider_2_image_id, '_wp_attachment_image_alt', true) : ''; 
+$slider_2_image_title   = ($slider_2_image_id) ? get_the_title($slider_2_image_id) : '';
+
+$slider_3_image_id      = !empty($items["slider_1"]['ID']) ? $items["slider_1"]['ID'] : '';
+$slider_3_image_src     = wp_get_attachment_image_url($slider_3_image_id, 'custom-size');
+$slider_3_image_srcset  = wp_get_attachment_image_srcset($slider_3_image_id, 'custom-size');
+$slider_3_image_info    = wp_get_attachment_image_src($slider_3_image_id, 'full');
+$slider_3_image_width   = ($slider_3_image_info) ? $slider_3_image_info[1] : '';
+$slider_3_image_height  = ($slider_3_image_info) ? $slider_3_image_info[2] : '';
+$slider_3_image_alt     = ($slider_3_image_id) ? get_post_meta($slider_3_image_id, '_wp_attachment_image_alt', true) : ''; 
+$slider_3_image_title   = ($slider_3_image_id) ? get_the_title($slider_3_image_id) : '';
+
 $copy     = isset($items['copy']) ? $items['copy'] : '';
 ?>
 
@@ -19,13 +43,13 @@ $copy     = isset($items['copy']) ? $items['copy'] : '';
             <div class="slick-small__col">
                 <div class="slickSmall">
                     <figure class="slick-small__img">
-                        <img src="<?php echo $slider_1; ?>" alt="slider 1 - <?php echo $sitename; ?>" title="slider 1" width="430" height="537">
+                        <img width="<?php echo $slider_1_image_width ?>" height="<?php echo $slider_1_image_height ?>" src="<?php echo $slider_1_image_src ?>" data-src="<?php echo $slider_1_image_src ?>" srcset="<?php echo $slider_1_image_srcset ?>" data-srcset="<?php echo $slider_1_image_srcset ?>" alt="<?php echo $slider_1_image_alt . ' - ' . $sitename; ?> " title="<?php echo $slider_1_image_title ?>">
                     </figure>
                     <figure class="slick-small__img">
-                        <img src="<?php echo $slider_2; ?>" alt="slider 2 - <?php echo $sitename; ?>" title="slider 2" width="430" height="537">
+                        <img width="<?php echo $slider_2_image_width ?>" height="<?php echo $slider_2_image_height ?>" src="<?php echo $slider_2_image_src ?>" data-src="<?php echo $slider_2_image_src ?>" srcset="<?php echo $slider_2_image_srcset ?>" data-srcset="<?php echo $slider_2_image_srcset ?>" alt="<?php echo $slider_2_image_alt . ' - ' . $sitename; ?> " title="<?php echo $slider_2_image_title ?>">
                     </figure>
                     <figure class="slick-small__img">
-                        <img src="<?php echo $slider_3; ?>" alt="slider 3 - <?php echo $sitename; ?>" title="slider 3" width="430" height="537">
+                        <img width="<?php echo $slider_3_image_width ?>" height="<?php echo $slider_3_image_height ?>" src="<?php echo $slider_3_image_src ?>" data-src="<?php echo $slider_3_image_src ?>" srcset="<?php echo $slider_3_image_srcset ?>" data-srcset="<?php echo $slider_3_image_srcset ?>" alt="<?php echo $slider_3_image_alt . ' - ' . $sitename; ?> " title="<?php echo $slider_3_image_title ?>">
                     </figure>
                 </div>
             </div>
