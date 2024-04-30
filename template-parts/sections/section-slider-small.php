@@ -42,15 +42,13 @@ $copy     = isset($items['copy']) ? $items['copy'] : '';
         <div class="slick-small__grid">
             <div class="slick-small__col">
                 <div class="slickSmall">
-                    <figure class="slick-small__img">
-                        <img width="<?php echo $slider_1_image_width ?>" height="<?php echo $slider_1_image_height ?>" src="<?php echo $slider_1_image_src ?>" data-src="<?php echo $slider_1_image_src ?>" srcset="<?php echo $slider_1_image_srcset ?>" data-srcset="<?php echo $slider_1_image_srcset ?>" alt="<?php echo $slider_1_image_alt . ' - ' . $sitename; ?> " title="<?php echo $slider_1_image_title ?>">
+                    <figure class="slick-small__img" role="img" aria-label="<?php echo $sitename ?>" style="background-image: url(<?php echo $slider_1_image_src ?>)" data-bg="<?php echo $slider_1_image_src ?>">
                     </figure>
-                    <figure class="slick-small__img">
-                        <img width="<?php echo $slider_2_image_width ?>" height="<?php echo $slider_2_image_height ?>" src="<?php echo $slider_2_image_src ?>" data-src="<?php echo $slider_2_image_src ?>" srcset="<?php echo $slider_2_image_srcset ?>" data-srcset="<?php echo $slider_2_image_srcset ?>" alt="<?php echo $slider_2_image_alt . ' - ' . $sitename; ?> " title="<?php echo $slider_2_image_title ?>">
+                    <figure class="slick-small__img" role="img" aria-label="<?php echo $sitename ?>" style="background-image: url(<?php echo $slider_2_image_src ?>)" data-bg="<?php echo $slider_2_image_src ?>">
                     </figure>
-                    <figure class="slick-small__img">
-                        <img width="<?php echo $slider_3_image_width ?>" height="<?php echo $slider_3_image_height ?>" src="<?php echo $slider_3_image_src ?>" data-src="<?php echo $slider_3_image_src ?>" srcset="<?php echo $slider_3_image_srcset ?>" data-srcset="<?php echo $slider_3_image_srcset ?>" alt="<?php echo $slider_3_image_alt . ' - ' . $sitename; ?> " title="<?php echo $slider_3_image_title ?>">
+                    <figure class="slick-small__img" role="img" aria-label="<?php echo $sitename ?>" style="background-image: url(<?php echo $slider_3_image_src ?>)" data-bg="<?php echo $slider_3_image_src ?>">
                     </figure>
+                   
                 </div>
             </div>
             <div class="slick-small__col">

@@ -60,13 +60,13 @@ $target_5 = isset($items['link_5']['target']) ? esc_attr($items['link_5']['targe
         <?php if($title_5) { ?><a href="<?php echo $link_5; ?>" target="<?php echo $target_5; ?>" title="<?php echo $title_5; ?>"><?php echo $title_5; ?></a><?php }?>
     </div>
     <div class="slickBanner">
-        <figure class="slick-banner__img" role="img" style="background-image: url(<?php echo $image_1_src ?>)" data-bg="<?php echo $image_1_src ?>">
+        <figure class="slick-banner__img" role="img" aria-label="<?php echo $title_1 . ' - ' . $sitename; ?>" style="background-image: url(<?php echo $image_1_src ?>)" data-bg="<?php echo $image_1_src ?>">
         </figure>
 
-        <figure class="slick-banner__img" role="img" style="background-image: url(<?php echo $image_2_src ?>)" data-bg="<?php echo $image_2_src ?>">
+        <figure class="slick-banner__img" role="img" aria-label="<?php echo $title_2 . ' - ' . $sitename;  ?>" style="background-image: url(<?php echo $image_2_src ?>)" data-bg="<?php echo $image_2_src ?>">
         </figure>
 
-        <figure class="slick-banner__img" role="img" style="background-image: url(<?php echo $image_3_src ?>)" data-bg="<?php echo $image_3_src ?>">
+        <figure class="slick-banner__img" role="img" aria-label="<?php echo $title_3 . ' - ' . $sitename;  ?>" style="background-image: url(<?php echo $image_3_src ?>)" data-bg="<?php echo $image_3_src ?>">
         </figure>
     </div>
 </section>

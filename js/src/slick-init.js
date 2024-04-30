@@ -32,12 +32,26 @@ export function initSlickCarousels() {
   $(".slickTestimonials").slick({
     dots: true,
     infinite: true,
-    speed: 700,
+    speed: 900,
     slidesToShow: 3,
     autoplay: true,
-    autoplaySpeed: 300000,
+    autoplaySpeed: 3000,
     centerMode: true,
     arrows: false,
+
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+          centerMode: false,
+        },
+      },
+    ],
+
   });
 
   $(".slickGallery").each(function () {

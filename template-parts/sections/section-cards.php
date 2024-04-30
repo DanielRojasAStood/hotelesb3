@@ -64,8 +64,7 @@ $alt_4       = isset($group_cards['link_4']['title']) ? esc_attr($group_cards['l
 ?>
 <section class="customCards">
     <div class="customCards__item">
-        <figure class="customCards__img">
-            <img width="<?php echo $image_1_width ?>" height="<?php echo $image_1_height ?>" src="<?php echo $image_1_src ?>" data-src="<?php echo $image_1_src ?>" srcset="<?php echo $image_1_srcset ?>" data-srcset="<?php echo $image_1_srcset ?>" alt="<?php echo $image_1_alt . ' - ' . $sitename; ?> " title="<?php echo $image_1_title ?>">
+        <figure class="customCards__img" role="img" aria-label="<?php echo $title_1 . ' - ' . $sitename;  ?>" style="background-image: url(<?php echo $image_1_src ?>)" data-bg="<?php echo $image_1_src ?>">
         </figure>
         <figcaption class="customCards__copy">
             <h2 class="h2"><?php echo $title_1; ?></h2>
@@ -76,8 +75,7 @@ $alt_4       = isset($group_cards['link_4']['title']) ? esc_attr($group_cards['l
         </figcaption>
     </div>
     <div class="customCards__item">
-        <figure class="customCards__img">
-            <img width="<?php echo $image_2_width ?>" height="<?php echo $image_2_height ?>" src="<?php echo $image_2_src ?>" data-src="<?php echo $image_2_src ?>" srcset="<?php echo $image_2_srcset ?>" data-srcset="<?php echo $image_2_srcset ?>" alt="<?php echo $image_2_alt . ' - ' . $sitename; ?> " title="<?php echo $image_2_title ?>">
+        <figure class="customCards__img" role="img" aria-label="<?php echo $title_2 . ' - ' . $sitename;  ?>" style="background-image: url(<?php echo $image_2_src ?>)" data-bg="<?php echo $image_2_src ?>">
         </figure>
         <figcaption class="customCards__copy">
             <h2 class="h2"><?php echo $title_2; ?></h2>
@@ -88,8 +86,7 @@ $alt_4       = isset($group_cards['link_4']['title']) ? esc_attr($group_cards['l
         </figcaption>
     </div>
     <div class="customCards__item">
-        <figure class="customCards__img">
-            <img width="<?php echo $image_3_width ?>" height="<?php echo $image_3_height ?>" src="<?php echo $image_3_src ?>" data-src="<?php echo $image_3_src ?>" srcset="<?php echo $image_3_srcset ?>" data-srcset="<?php echo $image_3_srcset ?>" alt="<?php echo $image_3_alt . ' - ' . $sitename; ?> " title="<?php echo $image_3_title ?>">
+        <figure class="customCards__img" role="img" aria-label="<?php echo $title_3 . ' - ' . $sitename;  ?>" style="background-image: url(<?php echo $image_3_src ?>)" data-bg="<?php echo $image_3_src ?>">
         </figure>
         <figcaption class="customCards__copy">
             <h2 class="h2"><?php echo $title_3; ?></h2>
@@ -100,8 +97,7 @@ $alt_4       = isset($group_cards['link_4']['title']) ? esc_attr($group_cards['l
         </figcaption>
     </div>
     <div class="customCards__item">
-        <figure class="customCards__img">
-        <img width="<?php echo $image_4_width ?>" height="<?php echo $image_4_height ?>" src="<?php echo $image_4_src ?>" data-src="<?php echo $image_4_src ?>" srcset="<?php echo $image_4_srcset ?>" data-srcset="<?php echo $image_4_srcset ?>" alt="<?php echo $image_4_alt . ' - ' . $sitename; ?> " title="<?php echo $image_4_title ?>">
+        <figure class="customCards__img" role="img" aria-label="<?php echo $title_4 . ' - ' . $sitename;  ?>" style="background-image: url(<?php echo $image_4_src ?>)" data-bg="<?php echo $image_4_src ?>">
         </figure>
         <figcaption class="customCards__copy">
             <h2 class="h2"><?php echo $title_4; ?></h2>

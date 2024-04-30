@@ -14,30 +14,49 @@ p {
 }
 
 .container {
-  max-width: 1160px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 20px;
 
+  @media only screen and (min-width: 1024px) {
+    max-width: 1160px;
+  }
+
   &--large {
-    max-width: 98%;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 20px;
+
+    @media only screen and (min-width: 1024px) {
+      max-width: 98%;
+    }
   }
 
   &--medium {
-    max-width: 900px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 20px;
+
+    @media only screen and (min-width: 1024px) {
+      max-width: 900px;
+    }
   }
 }
 
 /* Font Size */
 .h1 {
-  font-size: var(--40);
+  font-size: var(--36);
+
+  @media only screen and (min-width: 1024px) {
+    font-size: var(--40);
+  }
 }
 
 .h2 {
-  font-size: var(--36);
+  font-size: var(--30);
+  @media only screen and (min-width: 1024px) {
+    font-size: var(--36);
+  }
 }
 
 .h3 {
@@ -171,13 +190,21 @@ p {
   &__wrapper {
     display: flex;
     justify-content: space-between;
-    max-width: 1160px;
     margin: 0 auto;
-    padding: 0 20px;
+
+    @media only screen and (min-width: 1024px) {
+      max-width: 1160px;
+      padding: 0 20px;
+    }
   }
 
   &__logo {
-    width: 80px;
+    width: 50px;
+
+    a {
+      display: flex;
+    }
+
     @media only screen and (min-width: 1024px) {
       width: 60px;
     }
@@ -321,8 +348,12 @@ p {
 .slick-banner {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 400px;
   overflow: hidden;
+
+  @media only screen and (min-width: 1024px) {
+    height: 500px;
+  }
 
   &__overlay {
     position: absolute;
@@ -336,13 +367,26 @@ p {
 
   &__copy {
     position: absolute;
-    top: 50%;
+    bottom: 30px;
     left: 50%;
     display: flex;
     justify-content: center;
-    width: 900px;
-    transform: translate(-50%, -50%);
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    width: 100%;
+    transform: translate(-50%, 0);
     z-index: 1;
+
+    @media only screen and (min-width: 1024px) {
+      top: 60%;
+      bottom: inherit;
+      flex-direction: row;
+      width: 900px;
+      column-gap: 0;
+      width: auto;
+      transform: translate(-50%, -50%);
+    }
 
     a {
       padding: 0 20px;
@@ -350,7 +394,9 @@ p {
       font-size: var(--20);
       font-weight: 900;
       text-transform: uppercase;
-      border-right: 1px solid rgba(255, 255, 255, 0.5);
+      @media only screen and (min-width: 1024px) {
+        border-right: 1px solid rgba(255, 255, 255, 0.5);
+      }
 
       &:hover {
         color: var(--7A1B17);
@@ -378,14 +424,27 @@ p {
 
 /* Página Inicio - Text */
 .customText {
-  padding: 80px 0 0;
+  padding: 40px 0 0;
+
+  @media only screen and (min-width: 1024px) {
+    padding: 80px 0 0;
+  }
 }
 
 /* Página Inicio - Cards */
 .customCards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding: 80px 0 0;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 40px 0 0;
+
+  @media only screen and (min-width: 780px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media only screen and (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 80px 0 0;
+  }
 
   &__item {
     position: relative;
@@ -396,6 +455,18 @@ p {
     position: relative;
     display: flex;
     margin: 0;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media only screen and (min-width: 780px) {
+      height: 370px;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      height: 470px;
+    }
 
     &:before {
       content: "";
@@ -448,11 +519,19 @@ p {
 
 /* Página Inicio - Location */
 .customLocation {
-  padding: 80px 0 0;
+  padding: 40px 0 0;
+
+  @media only screen and (min-width: 1024px) {
+    padding: 80px 0 0;
+  }
 
   &__grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+
+    @media only screen and (min-width: 1024px) {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   &__col {
@@ -460,6 +539,13 @@ p {
     iframe {
       width: 100%;
     }
+  }
+
+  &__img {
+    height: 470px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   &__content {
@@ -489,15 +575,32 @@ p {
 
 /* Página Inicio - Slick Small */
 .slick-small {
-  padding: 80px 0 0;
+  padding: 40px 0 0;
+
+  @media only screen and (min-width: 1024px) {
+    padding: 80px 0 0;
+  }
+
   &__grid {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+
+    @media only screen and (min-width: 1024px) {
+      flex-direction: row;
+    }
   }
 
   &__img {
     display: flex;
     margin: 0;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media only screen and (min-width: 1024px) {
+      height: 470px;
+    }
 
     img {
       width: 100%;
@@ -508,11 +611,19 @@ p {
   }
 
   &__col {
-    width: 50%;
+    width: 100%;
+
+    @media only screen and (min-width: 1024px) {
+      width: 50%;
+    }
   }
 
   &__copy {
-    padding: 50px;
+    padding: 20px 0;
+
+    @media only screen and (min-width: 1024px) {
+      padding: 50px;
+    }
 
     li {
       padding: 2px 0;
@@ -553,10 +664,18 @@ p {
 
 /* Página Inicio - Slick Testimonils */
 .slick-testimonials {
-  padding: 80px 0 0;
+  padding: 40px 20px 0;
+
+  @media only screen and (min-width: 1024px) {
+    padding: 80px 0 0;
+  }
 
   &__item {
-    padding: 20px;
+    padding: 5px;
+
+    @media only screen and (min-width: 1024px) {
+      padding: 20px;
+    }
 
     .copy {
       position: relative;
@@ -602,9 +721,14 @@ p {
 
 /* Página Inicio - Calification */
 .customCalification {
-  margin-top: 100px;
-  padding: 80px 0;
+  margin-top: 40px;
+  padding: 40px 0;
   background-color: var(--7A1B17);
+
+  @media only screen and (min-width: 1024px) {
+    margin-top: 100px;
+    padding: 80px 0;
+  }
 
   .h2 {
     color: var(--fff);
@@ -612,10 +736,19 @@ p {
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     align-items: center;
     text-align: center;
+
+    @media only screen and (min-width: 780px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
 
     .h3 {
       font-weight: bold;
@@ -631,9 +764,15 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 200px;
-    height: 100px;
-    margin: 0;
+    width: 100px;
+    height: 50px;
+    margin: 0 auto;
+
+    @media only screen and (min-width: 1024px) {
+      width: 200px;
+      height: 100px;
+      margin: 0;
+    }
   }
 }
 
@@ -643,10 +782,15 @@ p {
   display: flex;
   align-items: flex-end;
   height: 321px;
-  padding-bottom: 80px;
-  margin-bottom: 80px;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
   background-repeat: no-repeat !important;
   background-size: cover !important;
+
+  @media only screen and (min-width: 1024px) {
+    padding-bottom: 80px;
+    margin-bottom: 80px;
+  }
 
   &:before {
     content: "";
@@ -676,15 +820,34 @@ p {
 }
 
 .customCardsEvents {
-  padding-bottom: 80px;
+  padding-bottom: 40px;
+
+  &:nth-child(2n) {
+    .customCardsEvents__grid {
+      flex-direction: row-reverse;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    padding-bottom: 80px;
+  }
+
   &__grid {
-    display: flex;
-    flex-direction: row;
-    column-gap: 20px;
+    display: block;
+
+    @media only screen and (min-width: 1024px) {
+      display: flex;
+      flex-direction: row;
+      column-gap: 20px;
+    }
   }
 
   &__col {
-    width: 50%;
+    width: 100%;
+
+    @media only screen and (min-width: 1024px) {
+      width: 50%;
+    }
 
     &:first-child {
       position: relative;
@@ -750,24 +913,53 @@ p {
       }
     }
   }
+
+  .title {
+    padding: 20px 0 15px;
+  }
+
+  .h4 {
+    padding-bottom: 20px;
+
+    @media only screen and (min-width: 1024px) {
+      padding-bottom: 0;
+    }
+  }
 }
 
 /* Página Blog */
 .customBlog {
-  padding: 80px 0 80px;
+  padding: 40px 0;
+
+  @media only screen and (min-width: 1024px) {
+    padding: 80px 0;
+  }
 
   &__grid {
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    column-gap: 15px;
+    grid-template-columns: 1fr;
+    gap: 15px;
+
+    @media only screen and (min-width: 1024px) {
+      grid-template-columns: 3fr 1fr;
+    }
   }
 }
 
 .customCardCategory {
   &__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 5px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+
+    @media only screen and (min-width: 780px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media only screen and (min-width: 1024px) {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 5px;
+    }
   }
 
   &__card {
@@ -779,8 +971,12 @@ p {
     img {
       width: 100%;
       height: 100%;
-      aspect-ratio: 3 / 4;
+      aspect-ratio: 1 / 1;
       object-fit: cover;
+
+      @media only screen and (min-width: 1024px) {
+        aspect-ratio: 3 / 4;
+      }
     }
   }
 
@@ -824,9 +1020,17 @@ p {
 
   &__grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(1, 1fr);
     column-gap: 15px;
     row-gap: 15px;
+
+    @media only screen and (min-width: 780px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media only screen and (min-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 
   &__card {
@@ -971,14 +1175,23 @@ p {
 
 /* Footer */
 .customFooter {
-  padding: 80px 0 0;
+  padding: 40px 0 0;
+
+  @media only screen and (min-width: 1024px) {
+    padding: 80px 0 0;
+  }
+
   background-color: var(--333);
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
     padding-bottom: 80px;
+
+    @media only screen and (min-width: 780px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
     .h3 {
       padding-bottom: 10px;

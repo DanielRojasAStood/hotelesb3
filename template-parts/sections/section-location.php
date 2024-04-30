@@ -36,9 +36,7 @@ $copy_2    = isset($group_location['copy_2']) ? $group_location['copy_2'] : '';
         <div class="customLocation__grid">
             <div class="customLocation__col">
                 <a href="<?php echo $link_map_url ?>"  target="<?php echo $link_map_target; ?>" title="<?php echo $link_map_title ?>">
-                    <figure>
-                        <img width="<?php echo $map_image_width ?>" height="<?php echo $map_image_height ?>" src="<?php echo $map_image_src ?>" data-src="<?php echo $map_image_src ?>" srcset="<?php echo $map_image_srcset ?>" data-srcset="<?php echo $map_image_srcset ?>" alt="<?php echo $map_image_alt . ' - ' . $sitename; ?> " title="<?php echo $map_image_title ?>">
-                    </figure>
+                    <figure class="customLocation__img" role="img" aria-label="<?php echo $title_1 . ' - ' . $sitename; ?>" style="background-image: url(<?php echo $map_image_src ?>)"></figure>
                 </a>
             </div>
             <div class="customLocation__col">
